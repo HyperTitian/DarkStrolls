@@ -10,9 +10,9 @@ public class DSContext : DbContext
 {
   public static string ConnectionString { get; set; }
 
-  public DbSet<User> Users { get; set; }
+  //public DbSet<User> Users { get; set; }
   
-  public DbSet<Message> Messages { get; set; }
+  //public DbSet<Message> Messages { get; set; }
 
   public DSContext(DbContextOptions options) : base(options)
   {
@@ -22,8 +22,8 @@ public class DSContext : DbContext
   protected override void OnModelCreating(ModelBuilder modelBuilder)
   {
     base.OnModelCreating(modelBuilder);
-    modelBuilder.Entity<User>().ToTable("users");
-    modelBuilder.Entity<Message>().ToTable("messages");
+    //modelBuilder.Entity<User>().ToTable("users");
+    //modelBuilder.Entity<Message>().ToTable("messages");
   }
 
   public DSContext CreateContext()
